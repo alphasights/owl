@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Owl</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {{BASE_TAG}}
+
+    <link rel="stylesheet" href="assets/vendor.css">
+    <link rel="stylesheet" href="assets/stylesheets/highlight/monokai_sublime.css">
+    <link rel="stylesheet" href="assets/owl.css">
+  </head>
+  <body>
+    <script>
+      window.OwlENV = {{ENV}};
+      window.EmberENV = window.OwlENV.EmberENV;
+    </script>
+    <script src="assets/vendor.js"></script>
+    <script src="assets/javascripts/highlight.pack.js"></script>
+    <script src="assets/owl.js"></script>
+    <script>
+      window.Owl = require('owl/app')['default'].create(OwlENV.APP);
+    </script>
+  </body>
+</html>
