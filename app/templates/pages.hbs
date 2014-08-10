@@ -1,20 +1,21 @@
-{{view "navigation"}}
+{{#view "navigation"}}
   <aside>
     <nav>
-      <ul>
-        {{#liquid-box}}
+      <div class="pages">
+        <h1>Pages</h1>
+
+        {{#liquid-box duration="100"}}
           {{#each}}
-            <li>
+            <div class="page">
               {{#link-to "page" this classNames="title"}}
                 {{title}}
               {{/link-to}}
 
-              <a class="delete" {{action "deletePage" this}}>-</a>
-            </li>
+              <a class="delete fa fa-trash-o" {{action "deletePage" this}}></a>
+            </div>
           {{/each}}
         {{/liquid-box}}
-
-      </ul>
+      </div>
 
       <form class="inline" {{action "createPage" on="submit"}}>
         <div class="input">
@@ -22,7 +23,7 @@
         </div>
 
         <div class="submit">
-          <input class="tiny" type="submit" value="+" class="button"/>
+          <input class="tiny" type="submit" value="&#xf058;" class="button"/>
         </div>
       </form>
     </nav>
@@ -35,6 +36,7 @@
       {{/if}}
     </button>
   </aside>
+{{/view}}
 
 <main>
   {{outlet}}

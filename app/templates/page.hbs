@@ -6,12 +6,12 @@
       <div>{{textarea value=body}}</div>
     </div>
   {{else}}
-    <div class="body">{{formattedBody}}></div>
+    <div class="body">{{formattedBody}}</div>
   {{/if}}
 
   {{#if isEditing}}
-    <div class="button tiny success" {{action "save"}}>Save</div>
+    <button class="tiny success" {{action "save"}}>Save</div>
   {{else}}
-    <div class="button tiny" {{action "toggleEditing"}}>Edit</div>
+    <button class="tiny" {{action "toggleEditing"}}>Edit</div>
   {{/if}}
 </section>

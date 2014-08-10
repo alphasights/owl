@@ -1,16 +1,35 @@
-li
-  +clearfix
+.pages
+  h1
+    font-size: rem-calc(27)
 
-  .title
-    float: left
+  .liquid-box, .liquid-measure
+    width: 100% !important
 
-  .delete
-    color: $primary-color
-    float: right
+  .page
+    +clearfix
+    padding: rem-calc(8) 0
+
+    .title
+      float: left
+
+    .delete
+      color: $primary-color
+      float: right
+      display: none
+
+    &:hover
+      .delete
+        display: block
 
 form.inline
   input[type="submit"]
     padding: 0 !important
+    font-family: FontAwesome
+    font-size: rem-calc(20)
+    color: green
 
 .toggle-expansion
-  float: right
+  position: fixed
+  bottom: $main-padding
+  left: $main-padding
+  margin: 0

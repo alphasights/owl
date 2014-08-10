@@ -1,3 +1,4 @@
+// framework variables
 $include-open-sans: false
 $row-width: 100%
 
@@ -11,11 +12,14 @@ $fa-font-path: "/assets/fonts" !default
 @import "vendor/foundation/scss/normalize.scss"
 @import "vendor/foundation/scss/foundation.scss"
 @import "vendor/bourbon/app/assets/stylesheets/_bourbon.scss"
+
+// personal variables
+$aside-width: 250px
+$main-padding: rem-calc(15)
+
 @import "structure"
 @import "pages"
 @import "page"
-
-$aside-width: 250px
 
 *
   +transition(all 0.5s ease)
@@ -40,7 +44,7 @@ body > .ember-view
 main
   position: relative
   margin-left: $aside-width
-  padding: rem-calc(15)
+  padding: $main-padding
   min-height: 100%
 
 pre
@@ -54,9 +58,6 @@ textarea
   resize: none
   margin: 0
 
-ul
-  list-style: none
-
 aside
   box-shadow: 1px 1px 2px rgba(0,0,0,.3)
   position: fixed
@@ -65,9 +66,10 @@ aside
   left: 0
   bottom: 0
   overflow-y: scroll
-  padding: rem-calc(15)
+  padding: $main-padding
 
 nav
-  ul
+  .pages
     +side-nav
+    padding-top: 0
     font-family: inherit
