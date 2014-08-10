@@ -1,0 +1,3 @@
+.editor
+  = textarea value=body
+.result = formattedBody

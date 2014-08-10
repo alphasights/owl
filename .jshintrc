@@ -2,7 +2,9 @@
   "predef": {
     "document": true,
     "window": true,
-    "OwlENV": true
+    "OwlENV": true,
+    "marked": true,
+    "hljs": true
   },
   "browser" : true,
   "boss" : true,

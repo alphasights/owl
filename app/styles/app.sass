@@ -1,2 +1,42 @@
+$include-open-sans: false
+$row-width: 100%
+
+$paragraph-font-family: inherit
+$code-font-family: Courier New, Consolas, Liberation Mono, Courier, monospace
+$code-font-weight: normal
+
+$fa-font-path: "/assets/fonts" !default
+@import "vendor/font-awesome/scss/font-awesome.scss"
+
+@import "vendor/foundation/scss/normalize.scss"
+@import "vendor/foundation/scss/foundation.scss"
+@import "vendor/bourbon/app/assets/stylesheets/_bourbon.scss"
+
+.ember-view, main, .editor
+  height: inherit
+
+pre
+  background-color: scale-color($secondary-color, $lightness: 70%)
+  padding: rem-calc(16)
+
 html, body
-  margin: 20px
+  padding-top: rem-calc(10)
+  height: 100%
+
+textarea
+  +box-shadow(none)
+  border: none
+  overflow: auto
+  outline: none
+  resize: none
+  height: 100%
+  margin: 0
+
+main
+  +grid-row
+
+.editor
+  +grid-column(6)
+
+.result
+  +grid-column(6)
