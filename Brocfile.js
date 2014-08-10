@@ -21,6 +21,8 @@ app.import('vendor/moment/moment.js');
 app.import('vendor/foundation/js/foundation.js');
 app.import('vendor/marked/lib/marked.js');
 app.import('vendor/ember-localstorage-adapter/localstorage_adapter.js')
+app.import('vendor/ember-string-parameterize/ember-string-parameterize.js')
+
 app.import('vendor/font-awesome/fonts/fontawesome-webfont.ttf', {
   destDir: 'assets/fonts'
 });
