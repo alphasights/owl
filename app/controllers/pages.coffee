@@ -8,6 +8,7 @@ PagesController = Ember.ArrayController.extend
       title = @get('newPageTitle')
 
       page = @store.createRecord('page', title: title)
+      page.save()
       @transitionToRoute('page', page)
       @get('controllers.page').send('toggleEditing')
 
