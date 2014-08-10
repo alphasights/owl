@@ -1,18 +1,25 @@
-aside
-  nav
-    ul
-      each
-        li
-          link-to "page" this classNames="title"
-            = title
+view "navigation"
+  aside
+    nav
+      ul
+        each
+          li
+            link-to "page" this classNames="title"
+              = title
 
-          a.delete{action "deletePage" this} -
+            a.delete{action "deletePage" this} -
 
-    form.inline submit=createPage
-      .input
-        = input value=newPageTitle placeholder="New Page"
-      .submit
-        input.tiny type="submit" value="+" class="button"
+      form.inline submit=createPage
+        .input
+          = input value=newPageTitle placeholder="New Page"
+        .submit
+          input.tiny type="submit" value="+" class="button"
+
+    button.toggle-expansion.tiny
+      if view.isExpanded
+        | Collapse
+      else
+        | Expand
 
 
 main
