@@ -27,6 +27,9 @@ html, body
   bottom: 0
   right: 0
 
+body
+  margin: 0
+
 body > .ember-view
   position: absolute
   top: 0
@@ -34,14 +37,11 @@ body > .ember-view
   bottom: 0
   right: 0
 
-body
-  margin: 0
-
 main
   position: relative
   margin-left: $aside-width
   padding: rem-calc(15)
-  height: 100%
+  min-height: 100%
 
 pre
   background-color: scale-color($secondary-color, $lightness: 70%)
