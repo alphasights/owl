@@ -7,6 +7,8 @@ PagesController = Ember.ArrayController.extend
     createPage: ->
       title = @get('newPageTitle')
 
+      return if Ember.isBlank(title)
+
       page = @store.createRecord('page', title: title)
       page.save()
       @transitionToRoute('page', page)
