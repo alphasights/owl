@@ -1,3 +1,20 @@
-.editor
-  = textarea value=body
-.result = formattedBody
+aside
+  nav
+    ul
+      each
+        li
+          link-to "page" this classNames="title"
+            = title
+
+          a.delete{action "deletePage" this} -
+
+    form.inline submit=createPage
+      .input
+        = input value=newPageTitle placeholder="New Page"
+      .submit
+        input.tiny type="submit" value="+" class="button"
+
+
+main
+  .content
+    outlet

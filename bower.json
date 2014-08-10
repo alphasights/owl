@@ -17,6 +17,7 @@
     "marked": "~0.3.2",
     "zocial": "*",
     "font-awesome": "~4.1.0",
-    "bourbon": "~3.1.8"
+    "bourbon": "~3.1.8",
+    "ember-localstorage-adapter": "~0.3.2"
   }
 }

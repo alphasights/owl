@@ -1,0 +1,22 @@
+main > .content
+  +grid-row
+
+section.page
+  .editor
+    +grid-column(6)
+
+  .result
+    +grid-column(6)
+
+form.inline
+  +grid-row
+
+  .input
+    +grid-column($columns: 9, $collapse: true)
+
+  .submit
+    +grid-column($columns: 3, $collapse: true)
+
+  input[type="submit"]
+    +prefix-postfix-base
+    +postfix($is-button: false)

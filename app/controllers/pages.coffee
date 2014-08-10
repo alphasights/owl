@@ -1,11 +1,16 @@
 `import Ember from 'ember'`
-`import markdown from '../helpers/markdown'`
 
 PagesController = Ember.ArrayController.extend
-  body: ''
+  actions:
+    createPage: ->
+      title = @get('newPageTitle')
 
-  formattedBody: (->
-    markdown(@get('body'))
-  ).property('body').readOnly()
+      @store.createRecord('page', title: title).save()
+
+    deletePage: (page) ->
+      page.deleteRecord()
+      page.save()
+
+      @transitionToRoute('pages')
 
 `export default PagesController`
