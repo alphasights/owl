@@ -2,10 +2,13 @@ main > .content
   +grid-row
 
 section.page
-  .editor
-    +grid-column(6)
+  .body
+    +grid-column(12)
 
-  .result
+    &.editing
+      +grid-column(6)
+
+  .editor
     +grid-column(6)
 
 form.inline

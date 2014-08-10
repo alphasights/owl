@@ -1,6 +1,10 @@
 section.page
-  .editor
-    = textarea value=body
-    button.tiny{action "save"} Save
+  if isEditing
+    .body.editing = formattedBody
 
-  .result = formattedBody
+    .editor
+      = textarea value=body
+      button.tiny.success{action "save"} Save
+  else
+    .body = formattedBody
+    button.tiny{action "toggleEditing"} Edit
