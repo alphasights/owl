@@ -12,12 +12,18 @@
     .title
       float: left
 
+      &.active
+        color: $side-nav-link-color-active
+        font-weight: $side-nav-font-weight-active
+
     .delete
       color: $primary-color
       float: right
       display: none
 
     &:hover
+      color: $side-nav-link-color-hover
+
       .delete
         display: block
 
