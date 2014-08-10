@@ -1,0 +1,41 @@
+{{view "navigation"}}
+  <aside>
+    <nav>
+      <ul>
+        {{#liquid-box}}
+          {{#each}}
+            <li>
+              {{#link-to "page" this classNames="title"}}
+                {{title}}
+              {{/link-to}}
+
+              <a class="delete" {{action "deletePage" this}}>-</a>
+            </li>
+          {{/each}}
+        {{/liquid-box}}
+
+      </ul>
+
+      <form class="inline" {{action "createPage" on="submit"}}>
+        <div class="input">
+          {{input value=newPageTitle placeholder="New Page"}}
+        </div>
+
+        <div class="submit">
+          <input class="tiny" type="submit" value="+" class="button"/>
+        </div>
+      </form>
+    </nav>
+
+    <button class="toggle-expansion tiny">
+      {{#if view.isExpanded}}
+        Collapse
+      {{else}}
+        Expand
+      {{/if}}
+    </button>
+  </aside>
+
+<main>
+  {{outlet}}
+</main>
