@@ -12,22 +12,34 @@ NavigationView = Ember.View.extend
 
   isExpandedDidChange: (->
     if @get('isExpanding')
-      @$('aside').animate({
+      @$('aside').velocity({
         width: "+=100px"
       }, {
         duration: "fast",
         easing: "linear",
-        step: ((now) -> Ember.$('main').css("margin-left", now)),
         complete: (=> @set('isExpanded', true))
       })
+
+      Ember.$('main').velocity({
+        "margin-left": "+=100px"
+      }, {
+        duration: "fast",
+        easing: "linear",
+      })
     else
-      @$('aside').animate({
+      @$('aside').velocity({
         width: "-=100px"
       }, {
         duration: "fast",
         easing: "linear",
-        step: ((now) -> Ember.$('main').css("margin-left", now)),
         complete: (=> @set('isExpanded', false))
+      })
+
+      Ember.$('main').velocity({
+        "margin-left": "-=100px"
+      }, {
+        duration: "fast",
+        easing: "linear",
       })
   ).observes('isExpanding')
 
