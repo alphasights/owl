@@ -2,7 +2,7 @@
 
 PageRoute = Ember.Route.extend
   actions:
-    error: (reason, transition) ->
+    error: (reason) ->
       if reason.status == 404
         @transitionTo('pages')
 

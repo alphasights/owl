@@ -29,6 +29,6 @@
     "ember-cli-ic-ajax": "0.1.1",
     "express": "^4.1.1",
     "glob": "^3.2.9",
-    "liquid-fire": "^0.2.0"
+    "liquid-fire": "git://github.com/ef4/liquid-fire"
   }
 }

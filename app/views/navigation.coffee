@@ -17,7 +17,7 @@ NavigationView = Ember.View.extend
       }, {
         duration: "fast",
         easing: "linear",
-        step: ((now) -> $('main').css("margin-left", now)),
+        step: ((now) -> Ember.$('main').css("margin-left", now)),
         complete: (=> @set('isExpanded', true))
       })
     else
@@ -26,7 +26,7 @@ NavigationView = Ember.View.extend
       }, {
         duration: "fast",
         easing: "linear",
-        step: ((now) -> $('main').css("margin-left", now)),
+        step: ((now) -> Ember.$('main').css("margin-left", now)),
         complete: (=> @set('isExpanded', false))
       })
   ).observes('isExpanding')
