@@ -16,5 +16,4 @@ aside
 
 
 main
-  .content
-    outlet
+  outlet

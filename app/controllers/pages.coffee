@@ -5,7 +5,7 @@ PagesController = Ember.ArrayController.extend
     createPage: ->
       title = @get('newPageTitle')
 
-      @store.createRecord('page', title: title).save()
+      @store.createRecord('page', title: title)
 
     deletePage: (page) ->
       page.deleteRecord()

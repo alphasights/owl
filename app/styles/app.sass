@@ -17,8 +17,8 @@ $fa-font-path: "/assets/fonts" !default
 
 $aside-width: 250px
 
-.ember-view, main, .content
-  height: inherit
+*
+  +transition(all 0.5s ease)
 
 pre
   background-color: scale-color($secondary-color, $lightness: 70%)
@@ -28,16 +28,22 @@ html, body
   height: 100%
 
 body
-  padding-top: $column-gutter / 2
-  padding-left: $aside-width
   margin: 0
+
+.ember-view
+  height: inherit
+
+main
+  position: relative
+  margin-left: $aside-width
+  padding: rem-calc(15)
+  height: 100%
 
 textarea
   box-shadow: none
   overflow: auto
   outline: none
   resize: none
-  height: 100%
   margin: 0
 
 ul
@@ -49,7 +55,7 @@ aside
   width: $aside-width
   top: 0
   left: 0
-  height: 100%
+  bottom: 0
   overflow-y: scroll
 
 nav
