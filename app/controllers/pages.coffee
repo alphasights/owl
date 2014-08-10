@@ -1,11 +1,15 @@
 `import Ember from 'ember'`
 
 PagesController = Ember.ArrayController.extend
+  needs: ['page']
+
   actions:
     createPage: ->
       title = @get('newPageTitle')
 
-      @store.createRecord('page', title: title)
+      page = @store.createRecord('page', title: title)
+      @transitionToRoute('page', page)
+      @get('controllers.page').send('toggleEditing')
 
     deletePage: (page) ->
       page.deleteRecord()
