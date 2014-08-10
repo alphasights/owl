@@ -2,12 +2,13 @@ view "navigation"
   aside
     nav
       ul
-        each
-          li
-            link-to "page" this classNames="title"
-              = title
+        liquid-box
+          each
+            li
+              link-to "page" this classNames="title"
+                = title
 
-            a.delete{action "deletePage" this} -
+              a.delete{action "deletePage" this} -
 
       form.inline submit=createPage
         .input
