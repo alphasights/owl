@@ -20,5 +20,8 @@
     "bourbon": "~3.1.8",
     "ember-localstorage-adapter": "~0.3.2",
     "ember-string-parameterize": "~0.2.1"
+  },
+  "resolutions": {
+    "jquery": ">= 2.1.0"
   }
 }
