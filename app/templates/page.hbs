@@ -1,17 +1,11 @@
 <section class="page">
-  {{#if isEditing}}
-    <div class="body editing">{{formattedBody}}</div>
+  <div {{bind-attr class=":body isEditing:editing"}}>{{formattedBody}}</div>
 
+  {{#if isEditing}}
     <div class="editor">
       <div>{{textarea value=body}}</div>
     </div>
-  {{else}}
-    <div class="body">{{formattedBody}}</div>
   {{/if}}
 
-  {{#if isEditing}}
-    <button class="tiny success" {{action "save"}}>Save</div>
-  {{else}}
-    <button class="tiny" {{action "toggleEditing"}}>Edit</div>
-  {{/if}}
+  <button {{bind-attr class=":tiny isEditing:success"}} {{action "mainAction"}}>{{mainActionText}}</div>
 </section>

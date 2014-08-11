@@ -8,7 +8,20 @@ PageController = Ember.ObjectController.extend
     if @get('body') then markdown(@get('body')) else ''
   ).property('body').readOnly()
 
+  mainActionText: (->
+    if @get('isEditing')
+      'Save'
+    else
+      'Edit'
+  ).property('isEditing')
+
   actions:
+    mainAction: ->
+      if @get('isEditing')
+        @send('save')
+      else
+        @send('toggleEditing')
+
     save: ->
       @get('model').save()
       @send('toggleEditing')
