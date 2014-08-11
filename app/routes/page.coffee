@@ -1,9 +1,6 @@
 `import Ember from 'ember'`
 
 PageRoute = Ember.Route.extend
-  model: (params) ->
-    @store.find('page', params.slug.replace(/\-.*/, ''))
-
   setupController: (controller) ->
     @_super.apply(this, arguments)
 

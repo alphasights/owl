@@ -4,7 +4,8 @@
     "window": true,
     "OwlENV": true,
     "marked": true,
-    "hljs": true
+    "hljs": true,
+    "Firebase": true
   },
   "browser" : true,
   "boss" : true,

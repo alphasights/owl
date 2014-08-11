@@ -5,6 +5,6 @@ Router = Ember.Router.extend
 
 Router.map ->
   @resource 'pages', path: '/', ->
-    @resource 'page', path: '/:slug'
+    @resource 'page', path: '/:page_id'
 
 `export default Router`

@@ -18,8 +18,8 @@
     "zocial": "*",
     "font-awesome": "~4.1.0",
     "bourbon": "~3.1.8",
-    "ember-localstorage-adapter": "~0.3.2",
-    "ember-string-parameterize": "~0.2.1"
+    "ember-string-parameterize": "~0.2.1",
+    "emberfire": "~1.1.3"
   },
   "resolutions": {
     "jquery": ">= 2.1.0"

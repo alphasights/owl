@@ -29,5 +29,8 @@
     "express": "^4.1.1",
     "glob": "^3.2.9",
     "liquid-fire": "git://github.com/ef4/liquid-fire"
+  },
+  "dependencies": {
+    "emberfire": "^1.1.3"
   }
 }
