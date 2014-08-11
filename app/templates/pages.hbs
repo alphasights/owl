@@ -7,9 +7,9 @@
         {{#liquid-box duration="100"}}
           {{#each}}
             {{#link-to "page" this classNames="page" tagName="div"}}
-              {{#link-to "page" this classNames="title"}}
+              <a class="title">
                 {{title}}
-              {{/link-to}}
+              </a>
 
               <a class="delete fa fa-trash-o" {{action "deletePage" this}}></a>
             {{/link-to}}
