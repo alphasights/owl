@@ -10,9 +10,9 @@ PagesController = Ember.ArrayController.extend
       return if Ember.isBlank(title)
 
       page = @store.createRecord('page', title: title, body: "# #{title}")
-      page.save()
+      page.save().then(=> @set('newPageTitle', ''))
       @transitionToRoute('page', page)
-      @get('controllers.page').send('toggleEditing')
+      @get('controllers.page').send('activateEditing')
 
     deletePage: (page) ->
       page.deleteRecord()

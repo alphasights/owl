@@ -16,4 +16,7 @@ PageController = Ember.ObjectController.extend
     toggleEditing: ->
       @set('isEditing', !@get('isEditing'))
 
+    activateEditing: ->
+      @set('isEditing', true)
+
 `export default PageController`
