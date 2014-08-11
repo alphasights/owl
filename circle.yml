@@ -1,0 +1,9 @@
+machine:
+  node:
+    version: v0.10.26
+
+deployment:
+  production:
+    branch: master
+    heroku:
+      appname: as-owl
