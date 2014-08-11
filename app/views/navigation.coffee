@@ -8,7 +8,7 @@ NavigationView = Ember.View.extend
     @set('isExpanding', !@get('isExpanding'))
 
   didInsertElement: ->
-    @$('.toggle-expansion').on('click', => @toggleExpansion())
+    @$('input').on('focus blur', => @toggleExpansion())
 
   isExpandedDidChange: (->
     if @get('isExpanding')
