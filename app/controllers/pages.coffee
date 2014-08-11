@@ -9,7 +9,7 @@ PagesController = Ember.ArrayController.extend
 
       return if Ember.isBlank(title)
 
-      page = @store.createRecord('page', title: title)
+      page = @store.createRecord('page', title: title, body: "# #{title}")
       page.save()
       @transitionToRoute('page', page)
       @get('controllers.page').send('toggleEditing')

@@ -8,7 +8,9 @@ PageRoute = Ember.Route.extend
     @_super.apply(this, arguments)
 
     if controller.get('isEditing')
-      Ember.$('textarea').focus()
+      textarea = Ember.$('textarea')
+      textarea.val textarea.val()
+      textarea.focus()
 
   actions:
     error: (reason) ->
