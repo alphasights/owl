@@ -6,26 +6,28 @@
 
         {{#liquid-box duration="100"}}
           {{#each}}
-            <div class="page">
+            {{#link-to "page" this classNames="page" tagName="div"}}
               {{#link-to "page" this classNames="title"}}
                 {{title}}
               {{/link-to}}
 
               <a class="delete fa fa-trash-o" {{action "deletePage" this}}></a>
-            </div>
+            {{/link-to}}
           {{/each}}
         {{/liquid-box}}
       </div>
 
-      <form class="inline" {{action "createPage" on="submit"}}>
-        <div class="input">
-          {{input value=newPageTitle placeholder="New Page"}}
-        </div>
+      <div class="add-page">
+        <form class="inline" {{action "createPage" on="submit"}}>
+          <div class="input">
+            {{input value=newPageTitle placeholder="New Page"}}
+          </div>
 
-        <div class="submit">
-          <input class="tiny" type="submit" value="&#xf058;" class="button"/>
-        </div>
-      </form>
+          <div class="submit">
+            <input class="tiny" type="submit" value="&#xf058;" class="button"/>
+          </div>
+        </form>
+      </div>
     </nav>
   </aside>
 {{/view}}

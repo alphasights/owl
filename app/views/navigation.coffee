@@ -16,30 +16,26 @@ NavigationView = Ember.View.extend
         width: "+=100px"
       }, {
         duration: "fast",
-        easing: "linear",
         complete: (=> @set('isExpanded', true))
       })
 
       Ember.$('main').velocity({
         "margin-left": "+=100px"
       }, {
-        duration: "fast",
-        easing: "linear",
+        duration: "fast"
       })
     else
       @$('aside').velocity({
         width: "-=100px"
       }, {
         duration: "fast",
-        easing: "linear",
         complete: (=> @set('isExpanded', false))
       })
 
       Ember.$('main').velocity({
         "margin-left": "-=100px"
       }, {
-        duration: "fast",
-        easing: "linear",
+        duration: "fast"
       })
   ).observes('isExpanding')
 

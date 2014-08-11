@@ -6,6 +6,12 @@ $paragraph-font-family: inherit
 $code-font-family: Courier New, Consolas, Liberation Mono, Courier, monospace
 $code-font-weight: normal
 
+$main-white: #e9eef2
+$main-blue: #003f61
+$side-nav-link-color: $main-white
+$side-nav-link-color-active: black
+$side-nav-link-color-hover: $side-nav-link-color
+
 $fa-font-path: "/assets/fonts" !default
 @import "vendor/font-awesome/scss/font-awesome.scss"
 
@@ -21,9 +27,6 @@ $main-padding: rem-calc(15)
 @import "pages"
 @import "page"
 
-*
-  +transition(all 0.5s ease)
-
 html, body
   position: absolute
   top: 0
@@ -33,6 +36,7 @@ html, body
 
 body
   margin: 0
+  background-color: $main-white
 
 body > .ember-view
   position: absolute
@@ -52,21 +56,21 @@ pre
   padding: rem-calc(16)
 
 textarea
-  box-shadow: none
+  box-shadow: none !important
   overflow: auto
-  outline: none
+  outline: 0 !important
   resize: none
   margin: 0
+  border: 0
 
 aside
-  box-shadow: 1px 1px 2px rgba(0,0,0,.3)
   position: fixed
   width: $aside-width
   top: 0
   left: 0
   bottom: 0
   overflow-y: scroll
-  padding: $main-padding
+  background-color: $main-blue
 
 nav
   .pages

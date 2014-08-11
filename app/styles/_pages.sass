@@ -1,37 +1,46 @@
 .pages
   h1
     font-size: rem-calc(27)
+    font-weight: bold
+    color: $side-nav-link-color
+
+  h1, .page
+    padding: rem-calc(8) $main-padding
 
   .liquid-box, .liquid-measure
     width: 100% !important
 
   .page
     +clearfix
-    padding: rem-calc(8) 0
+    +transition(all 0.2s ease)
+    color: $side-nav-link-color
+
 
     .title
+      color: inherit
       float: left
       width: 90%
       word-wrap: break-word
 
-      &.active
-        color: $side-nav-link-color-active
-        font-weight: $side-nav-font-weight-active
-
     .delete
-      color: $primary-color
+      color: inherit
       float: right
       display: none
 
     &:hover
-      color: $side-nav-link-color-hover
-
       .delete
         display: block
 
-form.inline
-  input[type="submit"]
-    padding: 0 !important
-    font-family: FontAwesome
-    font-size: rem-calc(20)
-    color: green
+    &.active
+      color: $side-nav-link-color-active
+      background-color: $side-nav-link-color
+
+.add-page
+  padding: rem-calc(8) $main-padding
+
+  form.inline
+    input[type="submit"]
+      padding: 0 !important
+      font-family: FontAwesome
+      font-size: rem-calc(20)
+      color: green
